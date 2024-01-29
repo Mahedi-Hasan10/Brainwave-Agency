@@ -29,7 +29,7 @@ const Header = () => {
     };
   }, []);
 
-  const navbarClasses = `bg-${scrolling ? 'teal-500' : 'transparent'} dark:bg-${scrolling ? 'dark' : 'transparent'} dark:bg-opacity-30 bg-opacity-30 lg:px-[166px] md:px-[80px] px-2 py-3 flex justify-between items-center fixed shadow-md w-full z-50 `;
+  const navbarClasses = `bg-${scrolling ? 'teal-500' : 'transparent'} dark:bg-${scrolling ? 'medium' : 'transparent'} dark:bg-opacity-30 bg-opacity-30 lg:px-[166px] md:px-[80px] px-2 py-3 flex justify-between items-center fixed bg-${scrolling ? 'teal-500' : 'transparent'} shadow-${scrolling ? 'md':'none'} w-full z-50 `;
     
   
   return (

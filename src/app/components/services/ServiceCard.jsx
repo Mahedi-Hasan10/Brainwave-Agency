@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ServiceCard = ({cardImage, cardBgColor}) => {
     return (
-        <Card sx={{ maxWidth: 350 }} className={`${cardBgColor}`}>
+        <Card sx={{ maxWidth: 350 }} className={`${cardBgColor} hover:scale-105 transition duration-300 hover:shadow-md`}>
             <CardActionArea className=''>
                 <CardMedia
                 className='px-[120px] py-[30px] h-[200px] '
