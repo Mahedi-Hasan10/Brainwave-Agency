@@ -1,8 +1,9 @@
 import Image from "next/image";
 import ServiceCard from "./components/services/ServiceCard";
+import { Rate } from 'antd';
+
 
 export default function Home() {
-
   return (
     <main className="z-10">
       {/* hero section  */}
@@ -41,19 +42,53 @@ export default function Home() {
           We provide great services for our customers based on needs
         </h3>
         <div className="lg:mt-[81px] md:mt-[50px] mt-[25px] flex justify-around flex-wrap gap-3">
-          <ServiceCard cardBgColor="bg-[#68d585]" cardImage="/service1.svg"/>
-          <ServiceCard cardBgColor="bg-[#473BF0]" cardImage="/service2.svg"/>
-          <ServiceCard cardBgColor="bg-[#F64B4B]" cardImage="/service3.svg"/>
+          <ServiceCard cardBgColor="bg-[#68d585]" cardImage="/service1.svg" />
+          <ServiceCard cardBgColor="bg-[#473BF0]" cardImage="/service2.svg" />
+          <ServiceCard cardBgColor="bg-[#F64B4B]" cardImage="/service3.svg" />
         </div>
-        <div className="flex justify-between items-center lg:mt-[81px] md:mt-[50px] mt-[25px] ">
-           <Image src="/clint.svg" height={164} width={164} alt="clint"/>
-           <div>
-                <h4 className="text-[24px] font-bold dark:text-white text-[#161C2D] leading-[34px]">
-                “OMG! I cannot believe that I have got a brand new landing page after getting Albino. It was super easy to edit and publish.”
-                </h4>
-            </div>
+        <div className="flex lg:gap-[81px] gap-[30px] items-center justify-center lg:mt-[81px] md:mt-[50px] mt-[35px] flex-wrap">
+          <Image src="/clint.svg" height={164} width={164} alt="clint" />
+          <div className="max-w-[735px]">
+          <Rate disabled defaultValue={5} className="lg:mb-[37px] mb-6" />
+            <h4 className="text-[24px] font-bold dark:text-white text-[#161C2D] leading-[34px]">
+              “OMG! I cannot believe that I have got a brand new landing page
+              after getting Albino. It was super easy to edit and publish.”
+            </h4>
+            <h5 className="text-[#161C2D] text-[17px] font-bold mt-3">
+              Franklin Hicks <span className="font-normal"> Web Developer</span>
+            </h5>
+          </div>
         </div>
       </section>
+
+      {/* hero our story */}
+      <section className="z-10 lg:py-[160px] md:py-[100px] py-[80px] lg:px-[166px] md:px-[80px] px-[20px]">
+          <p className="text-[#F64B4B] text-sm font-bold mb-10">Our Story</p>
+          <h3 className="dark:text-white text-[#161C2D] font-bold text-4xl max-w-[515px]">We know how everything works and why your business is failing over and over again.</h3>
+          <div className="flex lg:flex-nowrap flex-wrap gap-[95px] mt-[53px]">
+              <Image src="/story/story1.png" width={445} height={565} alt="story" className="mt-[53px]" />
+             <div >
+                  <div className="flex gap-[92px]">
+                      <div className="relative">
+                        <Image src="/story/story2.png" width={318} height={332} alt="story" />
+                        <Image src="/story/storyObject.svg" width={107} height={109} alt="story object" className="absolute top-[-45px] right-[-45px]" />
+                      </div>
+                      <div className="flex items-center justify-center">
+                          <Image src="/story/story3.png" width={160} height={167} alt="story" />
+                      </div>
+                  </div>
+                  <div className="flex items-center mt-[100px]">
+                      <p className="dark:text-white text-[#161C2D] text-[17px] font-normal max-w-[490px] leading-7">
+                          We share common trends and strategies for improving your rental income and making sure you stay in high demand. With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
+                      </p>
+                  </div>
+             </div>
+          </div>
+          <div>
+              
+          </div>
+      </section>
+      
     </main>
   );
 }
