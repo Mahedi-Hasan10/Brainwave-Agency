@@ -5,6 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+
     const [scrolling, setScrolling] = useState(false);
     const [showMenu, setShowMenu] = useState(false)
     const handleMenu = () => {

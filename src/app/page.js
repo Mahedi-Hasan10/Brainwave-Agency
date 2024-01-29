@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceCard from "./components/services/ServiceCard";
 
 export default function Home() {
+
   return (
     <main className="z-10">
       {/* hero section  */}
@@ -43,6 +44,14 @@ export default function Home() {
           <ServiceCard cardBgColor="bg-[#68d585]" cardImage="/service1.svg"/>
           <ServiceCard cardBgColor="bg-[#473BF0]" cardImage="/service2.svg"/>
           <ServiceCard cardBgColor="bg-[#F64B4B]" cardImage="/service3.svg"/>
+        </div>
+        <div className="flex justify-between items-center lg:mt-[81px] md:mt-[50px] mt-[25px] ">
+           <Image src="/clint.svg" height={164} width={164} alt="clint"/>
+           <div>
+                <h4 className="text-[24px] font-bold dark:text-white text-[#161C2D] leading-[34px]">
+                “OMG! I cannot believe that I have got a brand new landing page after getting Albino. It was super easy to edit and publish.”
+                </h4>
+            </div>
         </div>
       </section>
     </main>
